@@ -106,6 +106,7 @@ if is_function_in_class_tree:
 def index():
     return render_template('index.html')
 
+# https://flask.palletsprojects.com/en/1.1.x/patterns/favicon/
 @bp.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(bp.root_path, 'static'),
