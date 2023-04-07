@@ -53,7 +53,7 @@ function generate_prompt_card_html(index, item) {
             </a>
           </span>
           
-          <button class="mdui-btn mdui-float-right mdui-color-light-blue-50" id="copy-message-${index}">copy</button>
+          <button style="z-index:1000" class="mdui-btn mdui-float-right mdui-color-light-blue-50" id="copy-message-${index}">copy</button>
 
         </div>
 
