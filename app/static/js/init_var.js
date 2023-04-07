@@ -6,6 +6,7 @@
 
 let all_languages;
 let cur_lan_code = 'eng';
+cur_lan_code = 'chn';
 
 let cur_class = 'popular'
 
