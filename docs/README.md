@@ -4,11 +4,11 @@ cd PromptGenius/
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 waitress-serve --port=8080 --call app:create_app
 
-sudo docker build -t yiluxiangbei/PromptGenius:v1 -f docker/Dockerfile .
-sudo docker run --name PromptGenius -itd -p 8080:8080 yiluxiangbei/PromptGenius:v1
-sudo docker exec -it PromptGenius bash
+sudo docker build -t yiluxiangbei/prompt-genius:v1 -f docker/Dockerfile .
+sudo docker run --name prompt-genius -itd -p 8080:8080 yiluxiangbei/prompt-genius:v1
+sudo docker exec -it prompt-genius bash
 
-sudo docker push yiluxiangbei/PromptGenius:v1
+sudo docker push yiluxiangbei/prompt-genius:v1
 
 docker rmi `docker images | grep none | awk '{print $3}'`
 ```
