@@ -18,6 +18,9 @@ sudo docker stop prompt-genius
 sudo docker start prompt-genius
 sudo docker rm prompt-genius
 
+http://82.157.54.206:8080/
+https://prompt-genius.luomor.com
+
 sudo docker push yiluxiangbei/prompt-genius:v1
 
 docker rmi `docker images | grep none | awk '{print $3}'`
