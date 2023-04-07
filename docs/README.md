@@ -13,6 +13,7 @@ sudo docker run --name prompt-genius -itd -p 8080:8080 --volume="$(pwd)":/Prompt
 
 sudo docker exec -it prompt-genius bash
 
+sudo docker logs -f prompt-genius
 sudo docker stop prompt-genius
 sudo docker start prompt-genius
 sudo docker rm prompt-genius
