@@ -1,14 +1,15 @@
 import copy
 
 from flask import Blueprint, jsonify, render_template
-from flask import url_for
+from flask import Flask, url_for
 
 from app.utils import *
 
 
 bp = Blueprint('views', __name__)
 
-bp.add_url_rule('/favicon.ico',
+app = Flask(__name__)
+app.add_url_rule('/favicon.ico',
                  redirect_to=url_for('static', filename='favicon.ico'))
 
 meta = load_json_file(['data', 'meta.json'])
