@@ -7,6 +7,8 @@ from app.utils import *
 
 bp = Blueprint('views', __name__)
 
+bp.add_url_rule('/favicon.ico',
+                 redirect_to=url_for('static', filename='favicon.ico'))
 
 meta = load_json_file(['data', 'meta.json'])
 functions = load_json_file(['data', 'functions.json'])
