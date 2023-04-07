@@ -1,16 +1,12 @@
 import copy
 
 from flask import Blueprint, jsonify, render_template
-from flask import Flask, url_for
+from flask import send_from_directory
 
 from app.utils import *
 
 
 bp = Blueprint('views', __name__)
-
-app = Flask(__name__)
-app.add_url_rule('/favicon.ico',
-                 redirect_to=url_for('static', filename='favicon.ico'))
 
 meta = load_json_file(['data', 'meta.json'])
 functions = load_json_file(['data', 'functions.json'])
@@ -109,6 +105,11 @@ if is_function_in_class_tree:
 @bp.route('/index')
 def index():
     return render_template('index.html')
+
+@bp.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(bp.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @bp.route('/fetch_meta/<meta_name>')
