@@ -106,6 +106,10 @@ if is_function_in_class_tree:
 def index():
     return render_template('index.html')
 
+@bp.route('/baidu_verify_codeva-1JQHTA7UR3')
+def baidu_verify():
+    return render_template('baidu_verify_codeva-1JQHTA7UR3.html')
+
 # https://flask.palletsprojects.com/en/1.1.x/patterns/favicon/
 @bp.route('/favicon.ico')
 def favicon():
