@@ -27,8 +27,8 @@ def text_similarity_score(A, B, lang):
     # Normalize the input strings for Unicode consistency
     A = unicodedata.normalize('NFC', A)
     B = unicodedata.normalize('NFC', B)
-    print(A)
-    print(B)
+    #print(A)
+    #print(B)
 
     # key word match
     if (is_contain_string(A, B) or is_contain_string(B, A)):
