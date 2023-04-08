@@ -18,5 +18,11 @@ echo UnicodeEncode($str) . "\n";
 $test = array(
     "{像这样）"
 );
-echo json_encode($test);
+echo json_encode($test) . "\n";
 // ["{\u50cf\u8fd9\u6837\uff09"]
+
+$test = array(
+    "{像这样}"
+);
+echo json_encode($test);
+// ["{\u50cf\u8fd9\u6837}"]
