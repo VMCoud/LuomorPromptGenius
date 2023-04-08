@@ -107,6 +107,7 @@ def index():
     return render_template('index.html')
 
 @bp.route('/baidu_verify_codeva-1JQHTA7UR3')
+@bp.route('/baidu_verify_codeva-1JQHTA7UR3.html')
 def baidu_verify():
     return render_template('baidu_verify_codeva-1JQHTA7UR3.html')
 
