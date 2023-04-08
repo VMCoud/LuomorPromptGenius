@@ -299,14 +299,18 @@ function render_all_prompt(selected_lan_code) {
 
 // search prompt by give string
 function render_search_prompt_by_string(search_text, selected_lan_code) {
-    $.ajax({
-        type: 'GET',
-        url: 'search_prompt/' + search_text + '/' + selected_lan_code,
-        contentType: 'application/json',
-        success: function (data) {
-            render_prompt_display(data['content']);
-        }
-    });
+    if(search_text == '') {
+        render_search_prompt_by_class('popular', 'chn');
+    } else {
+        $.ajax({
+            type: 'GET',
+            url: 'search_prompt/' + search_text + '/' + selected_lan_code,
+            contentType: 'application/json',
+            success: function (data) {
+                render_prompt_display(data['content']);
+            }
+        });
+    }
 }
 
 // render given prompts
