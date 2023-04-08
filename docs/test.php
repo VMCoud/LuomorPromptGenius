@@ -13,3 +13,8 @@ function UnicodeEncode($str) {
  
 $str = "新浪微博";
 echo UnicodeEncode($str);
+
+$test = array(
+    "{像这样）"
+);
+echo json_encode($test);
