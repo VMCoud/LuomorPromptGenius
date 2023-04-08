@@ -4,7 +4,7 @@ from flask import Blueprint, jsonify, render_template
 from flask import send_from_directory
 
 from app.utils import *
-
+import urllib
 
 bp = Blueprint('views', __name__)
 
@@ -217,6 +217,7 @@ def get_prompt_info_for_render(fid: str, p: dict, lan_code: str):
 @bp.route('/search_prompt/<search_text>/<lan_code>')
 def search_prompt(search_text, lan_code):
     result = []
+    search_text = urllib.parse.unquote(search_text)
 
     for data in prompts:
         fid = data['function_id']
