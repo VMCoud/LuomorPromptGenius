@@ -113,7 +113,7 @@ def baidu_verify():
 
 @bp.route('/baidu_verify_codeva-kNM5HwgeNE')
 @bp.route('/baidu_verify_codeva-kNM5HwgeNE.html')
-def baidu_verify():
+def baidu_verify1():
     return render_template('baidu_verify_codeva-kNM5HwgeNE.html')
 
 # https://flask.palletsprojects.com/en/1.1.x/patterns/favicon/
