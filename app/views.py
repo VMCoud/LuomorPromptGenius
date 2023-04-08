@@ -118,7 +118,7 @@ def baidu_verify1():
 
 @bp.route('/BingSiteAuth')
 @bp.route('/BingSiteAuth.xml')
-def baidu_verify():
+def b_verify():
     return render_template('BingSiteAuth.xml')
 
 # https://flask.palletsprojects.com/en/1.1.x/patterns/favicon/
