@@ -220,7 +220,8 @@ def search_prompt(search_text, lan_code):
 
     for data in prompts:
         fid = data['function_id']
-        if fid not in functions_dict.keys(): continue
+        if fid not in functions_dict.keys():
+            continue
         function_desc = functions_dict[fid]['desc'][lan_code]
         class_list = [name[lan_code] for name in fid_to_cnames[fid]] 
         for p in data['content'][lan_code]:
