@@ -226,7 +226,7 @@ def search_prompt(search_text, lan_code):
         function_desc = functions_dict[fid]['desc'][lan_code]
         class_list = [name[lan_code] for name in fid_to_cnames[fid]] 
         for p in data['content'][lan_code]:
-            p_text = p['content'][0]
+            p_text = p['content']
 
             # also take output the class label
             compare_text_lst = class_list + [p_text, function_desc]
