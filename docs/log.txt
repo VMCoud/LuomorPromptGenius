@@ -3,3 +3,30 @@ sudo docker logs -f prompt-genius
 will be disabled by default in the future.  Set it to True or False to suppress this warning.
   'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
 INFO:waitress:Serving on http://0.0.0.0:8080
+
+I want you to act as a SQL terminal in front of an example database. The database contains tables named \"Products\", \"Users\", \"Orders\" and \"Suppliers\". I will type queries and you will reply with what the terminal would show. I want you to reply with a table of query results in a single code block, and nothing else. Do not write explanations. Do not type commands unless I instruct you to do so. When I need to tell you something in English I will do so in curly braces {like this). My first command is \'SELECT TOP 10 * FROM Products ORDER BY Id DESC\'
+ERROR:app:Exception on /search_prompt/academician/eng [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/PromptGenius/app/views.py", line 235, in search_prompt
+    score  = text_similarity_score(search_text, c_text, lan_code)
+  File "/PromptGenius/app/utils.py", line 34, in text_similarity_score
+    if (is_contain_string(A, B) or is_contain_string(B, A)):
+  File "/PromptGenius/app/utils.py", line 22, in is_contain_string
+    regex = re.compile(regex_pattern)
+  File "/usr/local/lib/python3.6/re.py", line 233, in compile
+    return _compile(pattern, flags)
+  File "/usr/local/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/local/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/local/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 491
