@@ -12,7 +12,7 @@ function UnicodeEncode($str) {
 }
  
 $str = "新浪微博";
-echo UnicodeEncode($str);
+echo UnicodeEncode($str) . "\n";
 
 $test = array(
     "{像这样）"
