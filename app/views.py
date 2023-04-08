@@ -111,6 +111,11 @@ def index():
 def baidu_verify():
     return render_template('baidu_verify_codeva-1JQHTA7UR3.html')
 
+@bp.route('/baidu_verify_codeva-kNM5HwgeNE')
+@bp.route('/baidu_verify_codeva-kNM5HwgeNE.html')
+def baidu_verify():
+    return render_template('baidu_verify_codeva-kNM5HwgeNE.html')
+
 # https://flask.palletsprojects.com/en/1.1.x/patterns/favicon/
 @bp.route('/favicon.ico')
 def favicon():
