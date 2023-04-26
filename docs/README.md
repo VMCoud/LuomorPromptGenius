@@ -12,6 +12,7 @@ sudo docker run --name prompt-genius -it --rm -p 8080:8080 --volume="$(pwd)":/Pr
 cd git/PromptGenius
 sudo docker run --name prompt-genius -itd -p 8080:8080 --volume="$(pwd)":/PromptGenius yiluxiangbei/prompt-genius:v1
 
+sudo docker ps -a|grep prompt-genius
 sudo docker exec -it prompt-genius bash
 
 sudo docker logs -f prompt-genius
@@ -21,6 +22,9 @@ sudo docker rm prompt-genius
 
 http://82.157.54.206:8080/
 https://prompt-genius.luomor.com
+
+docker 清理 log
+ls -alh /var/lib/docker/containers/9b16ad6d4ab227987a46659075497ba3394c37d0c7f5c61e4850da6a4cb34710/
 
 sudo docker push yiluxiangbei/prompt-genius:v1
 

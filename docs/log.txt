@@ -30,3 +30,17 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/sre_parse.py", line 869, in parse
     raise source.error("unbalanced parenthesis")
 sre_constants.error: unbalanced parenthesis at position 491
+
+ls -alh /var/lib/docker/containers/9b16ad6d4ab227987a46659075497ba3394c37d0c7f5c61e4850da6a4cb34710/
+total 2.8M
+drwx-----x  4 root root 4.0K Apr  9 01:01 .
+drwx-----x 30 root root 4.0K Apr 25 16:20 ..
+-rw-r-----  1 root root 2.7M Apr 26 16:42 9b16ad6d4ab227987a46659075497ba3394c37d0c7f5c61e4850da6a4cb34710-json.log
+drwx------  2 root root 4.0K Apr  7 19:50 checkpoints
+-rw-------  1 root root 3.4K Apr  9 01:01 config.v2.json
+-rw-r--r--  1 root root 1.6K Apr  9 01:01 hostconfig.json
+-rw-r--r--  1 root root   13 Apr  9 01:01 hostname
+-rw-r--r--  1 root root  174 Apr  9 01:01 hosts
+drwx-----x  2 root root 4.0K Apr  7 19:50 mounts
+-rw-r--r--  1 root root   89 Apr  9 01:01 resolv.conf
+-rw-r--r--  1 root root   71 Apr  9 01:01 resolv.conf.hash
