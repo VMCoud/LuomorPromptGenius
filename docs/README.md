@@ -9,6 +9,7 @@ sudo docker run --name prompt-genius -itd -p 8080:8080 yiluxiangbei/prompt-geniu
 
 sudo docker run --name prompt-genius -it --rm -p 8080:8080 --volume="$(pwd)":/PromptGenius yiluxiangbei/prompt-genius:v1
 
+cd git/PromptGenius
 sudo docker run --name prompt-genius -itd -p 8080:8080 --volume="$(pwd)":/PromptGenius yiluxiangbei/prompt-genius:v1
 
 sudo docker exec -it prompt-genius bash
